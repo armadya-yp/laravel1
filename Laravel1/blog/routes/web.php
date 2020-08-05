@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('home');
 });
@@ -22,11 +22,9 @@ Route::get('/register', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 });
+*/
+Route::get('/', 'HomeController@home');
 
-Route::get('Home', 'HomeController@index');
+Route::get('/register', 'AuthController@register');
 
-Route::get('Home', 'AuthController@index');
-
-public function index(){
-    return "Halo ini adalah method index, dalam controller HomeController.";
-}
+Route::post('/welcome2','AuthController@welcome');

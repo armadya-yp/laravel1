@@ -6,12 +6,12 @@
         <!-- membuat tampilan form  -->
         <h1>Buat Account Baru!</h1>
         <h3>Sign Up Form</h3>
-        <form action="http://localhost:8000/welcome">
+        <form action="/welcome2" method="POST">           <!-- form action="http://localhost:8000/welcome"> -->
+            @csrf
             <label for="NamaDepan">First Name:</label><br>
-            <input type="text" id="NamaDepan">
-            <br>
+            <input type="text" id="firstname" name="firstname" required=""> <br> <br>
             <label for="NamaAkhir">Last Name:</label><br>
-            <input type="text" id="NamaAkhir">
+            <input type="text" id="lastname" name="lastname" required="">
             <br>
             <label for="Gender">Gender:</label><br>
             <input type="Radio" name="Gender" value="L" id="Gender">Male <br>
