@@ -23,7 +23,11 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 */
-Route::get('/','HomeController@home');
+/*Route::get('/','HomeController@home'); */
+
+Route::get('/',function(){
+    return view('adminlte.dashboard');
+});
 
 Route::get('/register', 'AuthController@register');
 
@@ -41,6 +45,6 @@ Route::get('/items/create',function(){
     return view('items.create');
 });
 
-Route::get('/data-tables',function(){
-    return view('data-tables');
+Route::get('/datatable',function(){
+    return view('adminlte.datatable');
 });
