@@ -48,3 +48,12 @@ Route::get('/items/create',function(){
 Route::get('/datatable',function(){
     return view('adminlte.datatable');
 });
+
+// CRUD
+Route::get('/questions'                     ,'QuestionsController@index');      // ok R
+Route::get('/questions/create'              ,'QuestionsController@create');     // ok C
+Route::post('/questions'                    ,'QuestionsController@store');      // ok C
+Route::get('/questions/{questions_id}'      ,'QuestionsController@show');       // ok R
+Route::get('/questions/{questions_id}/edit' ,'QuestionsController@edit');       // ok U
+Route::put('/questions/{questions_id}'      ,'QuestionsController@update');     // ok U
+Route::delete('/questions/{questions_id}'   ,'QuestionsController@destroy');    // - D
